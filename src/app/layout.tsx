@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
+import { Bricolage_Grotesque } from "next/font/google";
+import Footer from "@/components/footer";
+import { tartuffo } from "./fonts";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["200","300","400", "500", "600", "700", "800"],
+  variable: "--font-bricolage-grotesque",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${bricolageGrotesque.variable} ${tartuffo.variable} antialiased`}
       >
+        <main>
+          <Header />
         {children}
+        <Footer />
+        </main>
       </body>
     </html>
   );
