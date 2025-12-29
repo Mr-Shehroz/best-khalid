@@ -20,7 +20,7 @@ const Services = () => {
                 <Image src="/macbook-2.svg" height={100} width={100} alt="macbook-2" className="w-[1446px] h-auto ml-auto -mt-43 z-30"/>
                 <div className="w-[822px] h-[822px] border border-[#F0F0F0] rounded-full absolute top-0 left-[20.5%] top-[26.5%] -z-10"/>
                 {/* <Image src="/services-blur.png" height={100} width={100} alt="services-blur" className="w-full h-10 absolute left-0 -top-35 z-10"/> */}
-                <div className="absolute left-0 top-50">
+                <div className="absolute left-[12%] top-[28%]">
                     <Servicespoints />
                 </div>
             </div>

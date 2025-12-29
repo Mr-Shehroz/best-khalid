@@ -30,8 +30,55 @@ html {
   overflow-x: hidden;
 }
 
-.shadow-button {
-  box-shadow: 0px -6px 20.3px 0px #2e90fa inset;
+@keyframes waveShadowAndTilt {
+  0% {
+    box-shadow: inset 0 -6px 20px 0 #2e90fa;
+    transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+  }
+  12.5% {
+    box-shadow: inset 3px -4px 22px 0 #2e90fa;
+    transform: perspective(800px) rotateX(6deg) rotateY(-6deg);
+  }
+  25% {
+    box-shadow: inset 6px -2px 24px 0 #2e90fa;
+    transform: perspective(800px) rotateX(10.2deg) rotateY(-10.2deg);
+  }
+  37.5% {
+    box-shadow: inset 3px 0px 22px 0 #2e90fa;
+    transform: perspective(800px) rotateX(6deg) rotateY(-6deg);
+  }
+  50% {
+    box-shadow: inset 0 6px 20px 0 #2e90fa;
+    transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+  }
+  62.5% {
+    box-shadow: inset -3px 4px 22px 0 #2e90fa;
+    transform: perspective(800px) rotateX(-6deg) rotateY(6deg);
+  }
+  75% {
+    box-shadow: inset -6px 2px 24px 0 #2e90fa;
+    transform: perspective(800px) rotateX(-10.2deg) rotateY(10.2deg);
+  }
+  87.5% {
+    box-shadow: inset -3px 0px 22px 0 #2e90fa;
+    transform: perspective(800px) rotateX(-6deg) rotateY(6deg);
+  }
+  100% {
+    box-shadow: inset 0 -6px 20px 0 #2e90fa;
+    transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+.wave-tilt-btn {
+  animation: waveShadowAndTilt 6s cubic-bezier(0.34, 0.14, 0.24, 0.92) infinite;
+  transform-style: preserve-3d;
+  will-change: transform, box-shadow;
+}
+
+.wave-tilt-btn {
+  animation: waveShadowAndTilt 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+  transition-timing-function: ease-in-out;
 }
 
 font-tartuffo {
@@ -115,10 +162,44 @@ font-tartuffo {
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: 2E90FA;
-  /* background-image: url(/problem-vector.png); */
-  /* background-size: cover; */
-  width: 87px;
-  /* height: 355px; */
+  /* background-color: #2E90FA; */
+  background-image: url(/blue-glow.png);
+  width: 355px;
+  height: 3px;
   z-index: 50;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #171717 !important;
+  background: white;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: white
+}
+svg.swiper-navigation-icon {
+    width: 13px !important;
+}
+.swiper-button-prev {
+  left: -5vw !important;
+}
+.swiper-button-next {
+  right: -5vw !important;
+}
+
+
+.testi-gradient {
+  background: linear-gradient(270deg, rgba(120, 120, 120, 0.4) 0%, rgba(80, 80, 80, 0) 29.82%);
+}
+
+/* Apply gradient background to non-active slides */
+.swiper-slide:not(.swiper-slide-active) .testimonial-card {
+  background: linear-gradient(270deg, rgba(120, 120, 120, 0.4) 0%, rgba(80, 80, 80, 0) 29.82%);
+}
+.line {
+  border: 1px solid;
+  border-image-source: linear-gradient(90deg, #FFFFFF 76.67%, rgba(153, 153, 153, 0) 100%);
 }
