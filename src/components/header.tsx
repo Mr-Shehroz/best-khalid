@@ -53,7 +53,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex bg-[#FFFFFF1A] rounded-full md:px-4 lg:px-0 lg:w-[600px] xl:w-[740px] 2xl:w-[817px] h-[50px] 2xl:h-[59px] justify-center items-center gap-4 lg:gap-6 xl:gap-8 font-bricolage text-white text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] font-normal tracking-[-0.07em] capitalize relative">
+          <nav className="hidden md:flex bg-[url(/nav.png)] bg-cover bg-center rounded-full md:px-8 lg:px-0 lg:w-[650px] xl:w-[740px] 2xl:w-[817px] h-[50px] 2xl:h-[59px] justify-center items-center gap-4 lg:gap-6 xl:gap-8 font-bricolage text-white text-[16px] md:text-[15px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] font-normal tracking-[-0.07em] capitalize relative">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
                 <Link
@@ -67,7 +67,7 @@ const Header = () => {
 
                   {/* Arrow: show on active OR hover */}
                   <span
-                    className={`absolute -left-6 top-1/2 -translate-y-1/2 transition-opacity duration-200 ${
+                    className={`absolute -left-5 top-1/2 -translate-y-1/2 transition-opacity duration-200 ${
                       isActive(item.href) ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                     }`}
                   >
@@ -76,7 +76,7 @@ const Header = () => {
                       width={12}
                       height={12}
                       alt=""
-                      className="w-[18px] h-auto"
+                      className="lg:w-[15px] w-[12px] h-auto"
                     />
                   </span>
                 </Link>
@@ -123,7 +123,7 @@ const Header = () => {
 
         {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 px-4 bg-[#001f33]/95 backdrop-blur-sm rounded-xl border border-[#37ACFF]/20">
+          <div className="md:hidden mt-4 pb-4 px-6 bg-[#001f33]/95 backdrop-blur-sm rounded-xl border border-[#37ACFF]/20">
             <div className="flex flex-col gap-2 font-bricolage text-white text-[18px] font-normal tracking-[-0.07em] capitalize">
               {navItems.map((item) => (
                 <div key={item.label} className="relative py-2.5">
@@ -143,7 +143,7 @@ const Header = () => {
                           width={12}
                           height={12}
                           alt="Active"
-                          className="w-[12px] h-auto"
+                          className="w-[15px] h-auto"
                         />
                       </span>
                     )}

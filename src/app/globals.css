@@ -68,6 +68,9 @@ html {
     transform: perspective(800px) rotateX(0deg) rotateY(0deg);
   }
 }
+.shadow-button {
+  box-shadow: 0px -6px 20.3px 0px #2E90FA inset;
+}
 
 .wave-tilt-btn {
   animation: waveShadowAndTilt 6s cubic-bezier(0.34, 0.14, 0.24, 0.92) infinite;
@@ -202,4 +205,14 @@ svg.swiper-navigation-icon {
 .line {
   border: 1px solid;
   border-image-source: linear-gradient(90deg, #FFFFFF 76.67%, rgba(153, 153, 153, 0) 100%);
+}
+
+@media screen and (max-width: 400px) {
+  .healthcare {
+  font-size: 12px;
+  width: 220px;
+}
+.list {
+  margin-top: 20px;
+}
 }

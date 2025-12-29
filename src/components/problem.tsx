@@ -3,52 +3,60 @@ import Revolving from "./revolving";
 
 const Problem = () => {
   return (
-    <section className="-mt-7 relative min-h-[120vh] bg-[url(/problem-bg.png)] bg-cover bg-right overflow-hidden">
+    <section className="-mt-7 relative min-h-[120vh] bg-[url(/problem-bg.png)] bg-cover bg-[70%_30%] overflow-hidden xl:px-10 px-5">
       <Image
         src="/macbook.svg"
         height={100}
         width={100}
         alt="macbook"
-        className="w-[1398px] h-auto absolute -left-18 top-25"
+        className="2xl:w-[1398px] xl:w-[1150px] lg:w-[850px] w-[750px] h-auto absolute lg:-left-5 -left-30 xl:top-27 top-40 hidden md:block"
       />
-      <div className="flex gap-4 items-end absolute bottom-51 left-64">
-        <div className="bg-[url(/hero-text-bg.png)] bg-cover bg-center w-[479px] h-[94px] rounded-full font-bricolage font-normal text-[24px] leading-[142%] tracking-[-0.01em] capitalize text-white flex justify-center items-center text-center">
-        A weak website means missed appointments and lost trust.
+      <div className="md:flex gap-4 items-end absolute 2xl:bottom-[27%] xl:bottom-[25%] lg:bottom-[30%] md:bottom-[37%] bottom-[25%] 2xl:left-64 lg:left-[5%] left-3 hidden">
+        <div className="bg-[url(/hero-text-bg.png)] bg-cover 2xl:w-[479px] 2xl:h-[94px] xl:w-[400px] lg:w-[350px] w-[300px] lg:h-[80px] h-[60px] rounded-full font-bricolage font-normal 2xl:text-[24px] xl:text-[22px] lg:text-[20px] text-[16px] leading-[142%] tracking-[-0.01em] capitalize text-white flex justify-center items-center text-center">
+          A weak website means missed appointments and lost trust.
         </div>
-        <Image src="/l-line.png" height={100} width={100} alt="l-line" className="w-[100px] h-auto mb-10"/>
+        <Image
+          src="/l-line.png"
+          height={100}
+          width={100}
+          alt="l-line"
+          className="lg:w-[100px] w-[70px] h-auto lg:mb-10 mb-8"
+        />
       </div>
-      <div className="absolute -right-[56%]">
+      <div className="absolute -right-[56%] hidden">
         <Revolving />
       </div>
       <div>
-        <div className="text-center max-w-[842px] mx-auto">
-          <h5 className="font-bricolage font-normal text-[28px] tracking-[-0.07em] capitalize text-white">
-            <span className="text-[40px]">[</span> The Problem{" "}
-            <span className="text-[40px]">]</span>
-          </h5>
-          <h3 className="mt-4 font-bricolage font-bold text-[48px] tracking-[-0.03em] leading-[123%] capitalize text-white">
-            Your Website{" "}
-            <span className="text-[#FFFFFF38]">Shouldn`t Be Why Patients</span>{" "}
-            <span className="text-[#FFFFFF38] font-tartuffo font-thin tracking-[0.01em]">
-              Choose Your Competitor
-            </span>
-          </h3>
-          <p className="mt-5 font-bricolage font-normal text-[18px] tracking-[-0.01em] capitalize leading-[142%] text-white">
+        <div className="text-center 2xl:max-w-[988px] xl:max-w-[900px] lg:max-w-[800px] md:max-w-[600px] max-w-full mx-auto">
+          <div className="2xl:max-w-[842px] xl:max-w-[780px] lg:max-w-[700px] md:max-w-[550px] max-w-full mx-auto">
+            <h5 className="font-bricolage font-normal 2xl:text-[28px] xl:text-[24px] lg:text-[22px] text-[20px] tracking-[-0.07em] capitalize text-white -mb-2">
+              <span className="2xl:text-[40px] xl:text-[36px] lg:text-[30px] text-[26px]">[</span> The Problem{" "}
+              <span className="2xl:text-[40px] xl:text-[36px] lg:text-[30px] text-[26px]">]</span>
+            </h5>
+            <h3 className="xl:mt-4 mt-2 font-bricolage font-bold 2xl:text-[48px] xl:text-[42px] lg:text-[38px] md:text-[32px] text-[30px] tracking-[-0.03em] leading-[142%] capitalize text-white">
+              Your Website{" "}
+              <span className="text-white">Shouldn`t Be Why Patients</span>{" "}
+              <span className="text-white font-tartuffo font-thin tracking-[0.01em]">
+                Choose Your Competitor
+              </span>
+            </h3>
+          </div>
+          <p className="xl:mt-5 mt-3 font-bricolage font-normal xl:text-[18px] text-[16px] tracking-[-0.01em] capitalize leading-[142%] text-white">
             Most healthcare websites are outdated, hard to navigate, and don’t
             reflect the quality of care you provide. In today`s digital-first
             world, patients expect a seamless online experience
           </p>
         </div>
-        <div className="bg-[#0E1A4A08] h-[483px] w-[817px] ml-[35%] relative mt-13">
+        <div className="bg-[#0E1A4A08] 2xl:h-[483px] 2xl:h-[400px] md:h-[350px] min-h-[300px] 2xl:w-[817px] xl:w-[750px] lg:w-[600px] md:w-[500px] max-w-full lg:ml-[35%] md:ml-[30%] relative 2xl:mt-13 xl:mt-10 mt-8 z-20 relative">
           <Image
             src="/glass-overlay.png"
             height={100}
             width={100}
             alt="glass-overlay"
-            className="absolute inset-0 w-full h-auto z-0"
+            className="absolute inset-0 w-full md:h-auto min-h-[300px] z-0"
           />
-          <div className="flex justify-end mr-17">
-            <ul className="font-bricolage font-bold text-[28px] leading-[142%] tracking-[-0.01em] capitalize text-white flex flex-col gap-3 justify-center mt-12 list-disc">
+          <div className="flex md:justify-end justify-start items-center 2xl:mr-17 xl:mr-[2vw] lg:mr-[3vw] md:mr-[5vw] mx-10">
+            <ul className="font-bricolage font-bold 2xl:text-[28px] xl:text-[26px] lg:text-[22px] text-[18px] leading-[142%] tracking-[-0.01em] capitalize text-white flex flex-col gap-3 justify-center xl:mt-12 lg:mt-8 md:mt-5 mt-8 list-disc list">
               <li className="">Slow load times</li>
               <Image
                 src="/li-border.png"
@@ -74,7 +82,7 @@ const Problem = () => {
                 className="w-full h-[2px]"
               />
               <li>Not mobile-friendly</li>
-                <Image
+              <Image
                 src="/li-border.png"
                 height={100}
                 width={100}

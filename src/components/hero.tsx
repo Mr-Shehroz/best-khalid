@@ -131,7 +131,7 @@ const Hero = () => {
             Book a Free Consultation
           </button>
           <div className="md:flex items-center gap-1 2xl:mt-28 mt-24 z-50 relative hidden">
-            <div className="lg:w-5 lg:h-5 w-4 h-4 rounded-full shadow-button" />
+            <div className="lg:w-5 lg:h-5 w-4 h-4 rounded-full shadow-button bg-[#003459]" />
             <div className="2xl:w-[98px] lg:w-[90px] w-[70px] border border-dashed border-white h-[1px]" />
             <div className="2xl:w-[201px] lg:w-[160px] w-[140px] h-[51px] rounded-full shadow-button bg-[#003459] flex items-center justify-center gap-4">
               <Image
@@ -178,7 +178,7 @@ const Hero = () => {
 
       {/* Floating CTA Button */}
       <div className="absolute xl:right-60 lg:right-25 md:right-18 rings -translate-x-1/2 md:translate-x-0 md:bottom-55 bottom-15 z-40">
-        <button className="bg-[url(/hero-text-bg.png)] bg-cover bg-center text-white rounded-[334px] 2xl:w-[443px] lg:w-[380px] md:w-[300px] w-[250px] lg:px-0 2xl:h-[59px] h-[50px] flex lg:gap-2 gap-1.5 justify-center items-center font-bricolage font-bold text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] tracking-[-0.07em] capitalize underline">
+        <button className="bg-[url(/hero-text-bg.png)] bg-cover bg-center text-white rounded-[334px] 2xl:w-[443px] lg:w-[380px] md:w-[300px] w-[250px] lg:px-0 2xl:h-[59px] md:h-[50px] h-[40px] flex lg:gap-2 gap-1.5 justify-center items-center font-bricolage font-bold healthcare text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] tracking-[-0.07em] capitalize underline">
           <Image
             src="/button-arrow.svg"
             width={1000}

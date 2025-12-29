@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
 
           {/* Section 3: Social + Form — appears SECOND on mobile */}
-          <div className="flex flex-col items-center w-full md:max-w-fit md:items-start gap-3 order-2 md:order-3">
+          <div className="flex flex-col items-center w-full md:max-w-fit md:items-end gap-3 order-2 md:order-3">
             <div className="flex items-center gap-5">
               <div className="border border-[#FFFFFF2B] h-10 w-10 rounded-full flex justify-center items-center">
                 <Image
