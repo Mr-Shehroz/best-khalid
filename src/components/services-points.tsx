@@ -1,106 +1,88 @@
+'use client';
+
 const Servicespoints = () => {
+  const services = [
+    {
+      title: "Local SEO for Healthcare",
+      description:
+        "Beautiful, modern layouts built around your brand and patients’ needs.",
+      wrapperClass: "items-start max-w-fit left-[82%] xl:top-[-4.9vh] top-[-3vh]",
+      contentClass: "group-hover:w-[480px] text-left 2xl:px-8 xl:px-6 px-4",
+      descAlign: "left-0 text-left 2xl:px-8 xl:px-6 px-4 -mt-2.5",
+    },
+    {
+      title: "Website Redesigns",
+      description:
+        "Refresh your digital presence with a modern, high-performing redesign.",
+      wrapperClass: "items-start max-w-fit left-[42%] lg:top-[2vh] top-[0vh]",
+      contentClass: "group-hover:w-[480px] text-left 2xl:px-8 xl:px-6 px-4",
+      descAlign: "left-0 text-left 2xl:px-8 xl:px-6 px-4 -mt-2.5",
+    },
+    {
+      title: "Custom Website Design",
+      description:
+        "Tailored websites that reflect your unique brand and mission.",
+      wrapperClass: "items-start max-w-fit lg:top-[9.3vh] top-[6vh]",
+      contentClass: "group-hover:w-[480px] 2xl:px-8 xl:px-6 px-4",
+      descAlign: "left-0 text-left 2xl:px-8 xl:px-6 px-4 -mt-2.5",
+    },
+    {
+      title: "Patient Booking & Form Integration",
+      description:
+        "Seamless scheduling and contact forms to boost patient engagement.",
+      wrapperClass: "items-start max-w-fit lg:top-[17vh] top-[10vh] xl:left-[17%] -left-15",
+      contentClass: "group-hover:w-[480px] 2xl:px-8 xl:px-6 px-4",
+      descAlign: "left-0 text-left 2xl:px-8 xl:px-6 px-4 -mt-2.5",
+    },
+    {
+      title: "Website Care & Maintenance",
+      description:
+        "Ongoing support, updates, and security to keep your site running smoothly.",
+      wrapperClass: "items-start max-w-fit lg:top-[24.5vh] top-[16vh] xl:left-[34%] left-[0%] -z-10 hover:z-10",
+      contentClass: "group-hover:w-[480px] 2xl:px-8 xl:px-6 px-4 z-10",
+      descAlign: "left-0 text-left 2xl:px-8 px-6 -mt-2.5 z-10",
+    },
+  ];
+
   return (
-    <div>
-      <div className="flex flex-col items-center gap-25 relative">
-        <div className="group bg-[url(/glassy-2.png)] bg-cover bg-center max-w-fit px-8 rounded-[32px] py-5 transition-all duration-300 hover:bg-blue-500 text-center hover:text-start relative left-[60%]">
-          <div className="">
-            <h5 className="font-bricolage font-bold text-[24px] leading-[123%] tracking-[-0.03em] text-white capitalize">
-              Local SEO for Healthcare
+    <div className="flex flex-col gap-6">
+      {services.map((item, i) => (
+        <div key={i} className={`group relative flex ${item.wrapperClass}`}>
+          
+          {/* Background */}
+          <div className="absolute inset-0 bg-[url(/glassy-2.png)] bg-cover bg-center rounded-[32px] transition-all duration-300 xl:h-[64px] group-hover:h-[120px]" />
+          <div className="absolute inset-0 bg-blue-600 rounded-[32px] opacity-0 group-hover:opacity-100 transition-all duration-300 h-[64px] group-hover:h-[120px] z-10" />
+
+          {/* Content */}
+          <div
+            className={`
+              relative z-10
+              2xl:px-8 xl:px-6 xl:py-4 px-4 py-3
+              rounded-[32px]
+              w-fit
+              transition-all duration-300
+              ${item.contentClass}
+            `}
+          >
+            <h5 className="font-bricolage font-bold 2xl:text-[24px] xl:text-[20px] lg:text-[18px] text-[16px] text-white">
+              {item.title}
             </h5>
 
-            {/* Hidden by default, visible on hover */}
             <p
-              className="font-bricolage font-normal text-[18px] leading-[142%] tracking-[-0.01em] text-white capitalize 
-              opacity-0 max-h-0 max-w-0 overflow-hidden 
-              transition-all duration-300 
-              group-hover:opacity-100 group-hover:max-h-[200px] group-hover:mt-3 group-hover:max-w-fit"
+              className={`
+                absolute top-[64px]
+                opacity-0 translate-y-2
+                group-hover:opacity-100 group-hover:translate-y-0
+                transition-all duration-300
+                font-bricolage 2xl:text-[18px] xl:text-[16px] lg:text-[15px] text-[14px] text-white
+                ${item.descAlign}
+              `}
             >
-              Beautiful, modern layouts built around your brand and patients’
-              needs.
+              {item.description}
             </p>
           </div>
         </div>
-
-
-        <div className="group bg-[url(/glassy-2.png)] bg-cover bg-center max-w-fit px-8 rounded-[32px] py-5 transition-all duration-300 hover:bg-blue-500 text-center hover:text-start relative left-[22%]">
-          <div className="px-8">
-            <h5 className="font-bricolage font-bold text-[24px] leading-[123%] tracking-[-0.03em] text-white capitalize">
-              Website Redesigns
-            </h5>
-
-            {/* Hidden by default, visible on hover */}
-            <p
-              className="font-bricolage font-normal text-[18px] leading-[142%] tracking-[-0.01em] text-white capitalize 
-              opacity-0 max-h-0 max-w-0 overflow-hidden 
-              transition-all duration-300 
-              group-hover:opacity-100 group-hover:max-h-[200px] group-hover:mt-3 group-hover:max-w-fit"
-            >
-              Beautiful, modern layouts built around your brand and patients’
-              needs.
-            </p>
-          </div>
-        </div>
-
-
-        <div className="group bg-[url(/glassy-2.png)] bg-cover bg-center max-w-fit px-8 rounded-[32px] py-5 transition-all duration-300 hover:bg-blue-500 text-center hover:text-start relative left-[-11%]">
-          <div className="px-8">
-            <h5 className="font-bricolage font-bold text-[24px] leading-[123%] tracking-[-0.03em] text-white capitalize">
-              Custom Website Design
-            </h5>
-
-            {/* Hidden by default, visible on hover */}
-            <p
-              className="font-bricolage font-normal text-[18px] leading-[142%] tracking-[-0.01em] text-white capitalize 
-              opacity-0 max-h-0 max-w-0 overflow-hidden 
-              transition-all duration-300 
-              group-hover:opacity-100 group-hover:max-h-[200px] group-hover:mt-3 group-hover:max-w-fit"
-            >
-              Beautiful, modern layouts built around your brand and patients’
-              needs.
-            </p>
-          </div>
-        </div>
-
-
-        <div className="group bg-[url(/glassy-2.png)] bg-cover bg-center max-w-fit px-8 rounded-[32px] py-5 transition-all duration-300 hover:bg-blue-500 text-center hover:text-start relative left-[17%]">
-          <div className="px-8">
-            <h5 className="font-bricolage font-bold text-[24px] leading-[123%] tracking-[-0.03em] text-white capitalize">
-              Patient Booking & Form Integration
-            </h5>
-
-            {/* Hidden by default, visible on hover */}
-            <p
-              className="font-bricolage font-normal text-[18px] leading-[142%] tracking-[-0.01em] text-white capitalize 
-              opacity-0 max-h-0 max-w-0 overflow-hidden 
-              transition-all duration-300 
-              group-hover:opacity-100 group-hover:max-h-[200px] group-hover:mt-3 group-hover:max-w-fit"
-            >
-              Beautiful, modern layouts built around your brand and patients’
-              needs.
-            </p>
-          </div>
-        </div>
-
-
-        <div className="group bg-[url(/glassy-2.png)] bg-cover bg-center max-w-fit px-8 rounded-[32px] py-5 transition-all duration-300 hover:bg-blue-500 text-center hover:text-start relative left-[23%]">
-          <div className="px-8">
-            <h5 className="font-bricolage font-bold text-[24px] leading-[123%] tracking-[-0.03em] text-white capitalize">
-              Website Care & Maintenance
-            </h5>
-
-            {/* Hidden by default, visible on hover */}
-            <p
-              className="font-bricolage font-normal text-[18px] leading-[142%] tracking-[-0.01em] text-white capitalize 
-              opacity-0 max-h-0 max-w-0 overflow-hidden 
-              transition-all duration-300 
-              group-hover:opacity-100 group-hover:max-h-[200px] group-hover:mt-3 group-hover:max-w-fit"
-            >
-              Beautiful, modern layouts built around your brand and patients’
-              needs.
-            </p>
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

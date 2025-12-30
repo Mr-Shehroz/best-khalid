@@ -1,31 +1,37 @@
-import Image from "next/image"
-import Servicespoints from "./services-points"
+import Image from "next/image";
+import Servicespoints from "./services-points";
+import ServicespointsMobile from "./services-points-mobile";
 
 const Services = () => {
-    return (
-        <section className='bg-[url(/services-bg.png)] bg-cover bg-center min-h-screen relative z-40'>
-            <div className="relative pt-23 z-40">
-                <div className="text-center max-w-[992px] mx-auto z-40 relative">
-                    <h5 className="font-bricolage font-normal text-[28px] tracking-[-0.07em] capitalize text-white">
-                        <span className="text-[40px]">[</span> services{" "}
-                        <span className="text-[40px]">]</span>
-                    </h5>
-                    <h3 className="mt-4 font-bricolage font-bold text-[48px] tracking-[-0.03em] leading-[123%] capitalize text-white">
-                        Healthcare Web{" "}
-                        <span className="text-[#FFFFFF38] font-tartuffo font-thin tracking-[0.01em]">
-                            Design Services
-                        </span>
-                    </h3>
-                </div>
-                <Image src="/macbook-2.svg" height={100} width={100} alt="macbook-2" className="w-[1446px] h-auto ml-auto -mt-43 z-30"/>
-                <div className="w-[822px] h-[822px] border border-[#F0F0F0] rounded-full absolute top-0 left-[20.5%] top-[26.5%] -z-10"/>
-                {/* <Image src="/services-blur.png" height={100} width={100} alt="services-blur" className="w-full h-10 absolute left-0 -top-35 z-10"/> */}
-                <div className="absolute left-[12%] top-[28%]">
-                    <Servicespoints />
-                </div>
-            </div>
-        </section>
-    )
-}
+  return (
+    <section className="bg-[url(/services-bg.png)] bg-cover bg-center md:min-h-screen py-10 relative z-40 overflow-hidden">
+      <div className="relative xl:pt-23 lg:pt-20 z-40">
+        <div className="text-center max-w-[992px] mx-auto z-40 relative">
+          <h3 className="mt-4 font-bricolage font-bold 2xl:text-[48px] xl:text-[42px] lg:text-[38px] md:text-[32px] text-[30px] tracking-[-0.03em] leading-[123%] capitalize text-white">
+            Healthcare Web{" "}
+            <span className="text-white font-tartuffo font-thin tracking-[0.01em]">
+              Design Services
+            </span>
+          </h3>
+        </div>
+        <Image
+          src="/macbook-2.svg"
+          height={100}
+          width={100}
+          alt="macbook-2"
+          className="2xl:w-[1446px] xl:w-[1100px] lg:w-[950px] md:w-[850px] md:scale-100 scale-130 w-full h-auto 2xl:ml-[25.2%] xl:ml-[27%] md:ml-[20%] 2xl:-mt-43 xl:-mt-25 z-30"
+        />
+        <div className="xl:w-[822px] xl:h-[822px] lg:w-[730px] lg:h-[730px] w-[600px] h-[600px] border border-[#F0F0F0] rounded-full absolute top-0 left-[20.5%] top-[29%] -z-10 hidden md:block" />
+        {/* <Image src="/services-blur.png" height={100} width={100} alt="services-blur" className="w-full h-10 absolute left-0 -top-35 z-10"/> */}
+        <div className="absolute left-[12%] top-[28%] hidden md:block">
+          <Servicespoints />
+        </div>
+        <div className="relative flex justify-center items-center text-center md:hidden mt-[8vh] px-5">
+          <ServicespointsMobile />
+        </div>
+      </div>
+    </section>
+  );
+};
 
-export default Services
+export default Services;
